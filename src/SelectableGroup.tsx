@@ -343,7 +343,7 @@ export class SelectableGroup extends Component<TSelectableGroupProps> {
     const evt = castTouchToMouseEvent(event)
     this.updateContainerScroll(evt)
 
-    if (this.mouseMoveStarted) {
+    if (this.mouseMoveStarted || this.props.disabled) {
       return
     }
     this.mouseMoveStarted = true
